@@ -1,0 +1,141 @@
+
+.headerComponent{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.headerComponent .header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.header-inner .main-heading-img img{
+  max-width: 144px;
+  width: 100%;
+}
+
+.header-inner .nav-list ul{
+  display: flex;
+  gap: 20px;
+}
+
+.header-inner .nav-list ul li{
+  list-style-type: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: #374151;
+  font-weight: 500;
+}
+
+.header-inner .nav-list ul li a{
+  text-decoration: none;
+  color: #414141;
+}
+
+.header-inner .header-logos{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-inner .header-logos img{
+  width: 20px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.header-inner .header-logos .sidebarImg{
+  display: none;
+}
+
+.header-inner .header-logos .sidebarImg img{
+  width: 20px;
+  height: 18px;
+}
+
+.headerComponent .sidebar-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 13px 0 12px 10px #000;
+  z-index: 999;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 50px;
+  max-width: 200px;
+  width: 100%;
+  transition-duration: 500ms;
+}
+
+.header-inner .sidebar-menu ul{
+    display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      margin-top: 30px;
+      width: 100%;
+}
+
+.header-inner .sidebar-menu ul li{
+list-style-type: none;
+  font-size: 20px;
+
+}
+
+.header-inner .sidebar-menu ul li a{
+  text-decoration: none;
+  font-size: 17px;
+    cursor: pointer;
+    color: #374151;
+    font-weight: 500;
+}
+
+.header-inner .sidebar-menu .sidebar-list .closing-svg svg{
+width: 20px;
+position: absolute;
+right: 25px;
+top: 20px;
+cursor: pointer;
+}
+
+.border-container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  top: 15px;
+}
+
+.border {
+  height: 1px;
+  background-color: #e5e7eb;
+}
+
+@media only screen and (max-width: 1240px){
+  .headerComponent{
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media only screen and (max-width: 840px){
+.header-inner .header-logos .sidebarImg{
+  display: flex;
+}
+.header-inner .nav-list{
+  display: none;
+}
+}
+
+@media only screen and (max-width: 600px){
+.headerComponent {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

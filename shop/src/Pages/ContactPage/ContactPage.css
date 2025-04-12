@@ -1,0 +1,136 @@
+
+.contactPage{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.contactPage .contact-inner .main-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactPage .contact-inner .main-heading hr{
+  border: solid 1px #414141;
+    background-color: #414141;
+    width: 45px;
+    height: 2.5px;
+}
+
+.contactPage .contact-inner .main-heading span{
+  color: #6b7280;
+}
+
+.contactPage .contact-inner .main-heading h1{
+  color: #374151;
+  font-weight: 430;
+  font-size: 30px;
+}
+
+.contact-inner .main-img-texts{
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-inner .main-img-texts .main-img{
+ max-width: 450px;
+ width: 100%;
+}
+
+.contact-inner .main-img-texts .main-img img{
+  width: 100%;
+}
+
+.contact-inner .main-img-texts .main-texts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-width: 200px;
+    width: 100%;
+}
+
+.contact-inner .main-img-texts .main-texts h2{
+color: #4b5563;
+font-weight: 600;
+}
+
+.contact-inner .main-img-texts .main-texts  p{
+  color: #6b7280;
+  font-weight: 450;
+  font-size: 18px;
+}
+
+.contact-inner .main-img-texts .main-texts button{
+  padding: 14px 30px;
+  border: solid 1px #000;
+  background-color: #fff;
+  color: #000;
+  font-size: 17px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.contact-inner .main-img-texts .main-texts button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.contactPage .contact-form-inner{
+  margin-top: 80px;
+}
+
+.contactPage .contact-form-inner .main-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contactPage .contact-form-inner .main-heading h1 {
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contactPage .contact-form-inner .main-heading p {
+  font-size: 17px;
+  font-weight: 450;
+  color: #9ca3af;
+  margin-top: 5px;
+}
+
+.contact-form-inner .main-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contact-form-inner .main-input input {
+  max-width: 400px;
+  width: 100%;
+  padding: 15px 15px;
+  font-size: 17px;
+  border: solid 1px;
+  outline: none;
+  border-right: none;
+}
+
+.contact-form-inner .main-input input::placeholder {
+  font-size: 17px;
+}
+
+.contact-form-inner .main-input button {
+  padding: 5px 40px;
+  cursor: pointer;
+  margin-left: 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 17px;
+  outline: none;
+  border: solid 1px #000;
+}

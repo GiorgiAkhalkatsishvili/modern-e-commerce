@@ -1,0 +1,218 @@
+
+.collectionPage{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.collectionPage .main-search-input{
+  background-color: #f9fafb;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: solid 2px #e5e7eb;
+  display: flex;
+  justify-content: center;
+}
+
+.collectionPage .main-search-input .input-texts{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 650px;
+  width: 100%;
+}
+
+.collectionPage .main-search-input .input-texts .inp{
+width: 100%;
+}
+
+.collectionPage .main-search-input .input-texts .inp input{
+padding-top: 7px;
+padding-bottom: 7px;
+width: 100%;
+border-radius: 18px;
+outline: none;
+border: solid 1px #9ca3af;
+padding-left: 20px;
+font-size: 16px;
+}
+
+.collectionPage .main-search-input .input-texts .inp input::placeholder{
+  font-size: 16px;
+}
+
+.collectionPage .main-search-input .closing-svg{
+height: 20px;
+}
+
+.collectionPage .main-search-input .closing-svg svg{
+  width: 15px;
+  cursor: pointer;
+}
+
+.collectionPage .collectionPage-inner{
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.collectionPage .collectionPage-inner .first-column-heading h2{
+  font-weight: 420;
+  font-size: 25px;
+}
+
+.collectionPage-inner .main-category-heading p{
+font-weight: 500;
+margin-top: 10px;
+font-size: 17px;
+}
+
+.collectionPage-inner .first-column-content .first-category-conatiner{
+  border: solid 1px rgb(209 213 219);
+  max-width: 220px;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.collectionPage .first-column-content{
+  max-width: 220px;
+  width: 100%;
+}
+
+.first-column-content .first-category-conatiner .main-list{
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+
+.first-column-content .first-category-conatiner .main-list .listOne{
+display: flex;
+align-items: center;
+gap: 7px;
+}
+
+.first-category-conatiner .secondOption{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.first-category-conatiner .listOne input{
+  cursor: pointer;
+}
+
+.first-category-conatiner .listOne p{
+ color: #374151;
+}
+
+.collectionPage-inner .first-column-content .second-category-conatiner {
+  border: solid 1px rgb(209 213 219);
+  max-width: 220px;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.first-column-content .second-category-conatiner .main-list {
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+
+.first-column-content .second-category-conatiner .main-list .listOne {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.second-category-conatiner .secondOption {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.second-category-conatiner .listOne input {
+  cursor: pointer;
+}
+
+.second-category-conatiner .listOne p {
+  color: #374151;
+}
+
+.collectionPage .second-column-content{
+  width: 100%;
+}
+
+.collectionPage .second-column-content .main-headings{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.collectionPage .second-column-content .second-cloumn-heading{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.collectionPage .second-column-content .second-cloumn-heading hr{
+ border: solid 1px #414141;
+  background-color: #414141;
+  width: 45px;
+  height: 2.5px;
+}
+
+.second-column-content .second-cloumn-heading h2{
+  color: #374151;
+  font-weight: 500;
+  font-size: 27px;
+}
+
+.second-column-content .second-cloumn-heading span{
+ color: #6b7280;
+}
+
+.second-column-content .filter-options select{
+  cursor: pointer;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.second-column-content .products{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 20px;
+  row-gap: 30px;
+  column-gap: 13px;
+}
+
+.second-column-content .products .product-img{
+  max-width: 225px;
+  cursor: pointer;
+  overflow: hidden;
+  max-height: 260px;
+  height: 100vh;
+}
+
+.second-column-content .products .product-img img{
+width: 100%;
+transition: .2s ease-in-out;
+}
+
+.second-column-content .products .product-img img:hover {
+  scale: 1.1;
+}
+
+.second-column-content .products .product-title p {
+  color: #374151;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.second-column-content .product-price p {
+  font-size: 17px;
+}
+
+.second-column-content .products .eachProduct{
+  width: 100%;
+}

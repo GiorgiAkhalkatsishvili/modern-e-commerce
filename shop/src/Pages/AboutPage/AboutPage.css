@@ -1,0 +1,116 @@
+
+.aboutPage{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.aboutPage .about-inner .main-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.aboutPage .about-inner .main-heading hr{
+  border: solid 1px #414141;
+    background-color: #414141;
+    width: 45px;
+    height: 2.5px;
+}
+
+.aboutPage .about-inner .main-heading h1{
+  color: #374151;
+  font-weight: 430;
+  font-size: 30px;
+}
+
+.aboutPage .about-inner .main-heading span{
+  color: rgb(107 114 128);
+}
+
+.aboutPage .main-info-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.aboutPage .main-info-text p{
+color: #4b5563;
+font-size: 18px;
+font-weight: 450;
+}
+
+.aboutPage .main-info-text .text-heading h3{
+color: #1f2937;
+}
+
+.aboutPage .about-inner .main-img-texts{
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.aboutPage .about-inner .main-img-texts .main-img{
+  max-width: 450px;
+    width: 100%;
+}
+
+.aboutPage .about-inner .main-img-texts .main-img img{
+  width: 100%;
+}
+
+.aboutPage .bottom-info-containers .bottom-main-heading{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.aboutPage .bottom-info-containers .bottom-main-heading h2{
+  color: #374151;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.aboutPage .bottom-info-containers .bottom-main-heading span{
+color: #6b7280;
+}
+
+.aboutPage .bottom-info-containers .bottom-main-heading hr {
+  border: solid 1px #414141;
+  background-color: #414141;
+  width: 45px;
+  height: 2.5px;
+}
+
+.aboutPage .bottom-info-containers .bottom-borders{
+  border: solid 2px #e5e7eb;
+  display: flex;
+  margin-top: 30px;
+}
+
+.bottom-info-containers .bottom-borders .borderOne{
+  border-right: solid 2px #e5e7eb;
+  width: 400px;
+}
+
+.bottom-info-containers .bottom-borders .borderOne .border-texts{
+padding: 80px 30px 80px 50px;  
+}
+
+.bottom-info-containers .bottom-borders .borderOne .border-texts h4{
+font-size: 17px;
+color: #000;
+margin-bottom: 15px;
+}
+
+.bottom-info-containers .bottom-borders .borderOne .border-texts p{
+  padding-right: 20px;
+}
+
+.bottom-info-containers .bottom-borders .final-border-container{
+  border: none;
+}

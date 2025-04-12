@@ -1,0 +1,165 @@
+
+.bannerComponent{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.bannerComponent .banner-inner{
+  border: solid 1px #9ca3af;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-inner .banner-texts{
+display: flex;
+justify-content: center;
+align-items: center;
+  width: 50%;
+}
+
+.banner-inner .banner-texts hr{
+  border: solid 1px #414141;
+  width: 50px;
+}
+
+.banner-inner .first-texts{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner-inner .banner-img img{
+  max-width: 630px;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-inner .first-texts p{
+  font-size: 20px;
+  font-weight: 500;
+  color: #414141;
+}
+
+.banner-inner .banner-texts h2{
+  font-size: 60px;
+  font-family: serif;
+  color: #414141;
+  font-weight: 400;
+}
+
+.banner-inner .banner-bottom-texts{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner-inner .banner-bottom-texts hr {
+  border: solid 1px #414141;
+  width: 50px;
+}
+
+.banner-inner .banner-bottom-texts p{
+  font-size: 20px;
+    font-weight: 500;
+    color: #414141;
+}
+
+@media only screen and (max-width: 1240px) {
+  .bannerComponent {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+.bannerComponent .banner-inner{
+gap: 10px;
+}
+
+.banner-inner .first-texts p{
+font-size: 18px;
+}
+
+.banner-inner .banner-bottom-texts p{
+font-size: 18px;
+}
+
+.banner-inner .banner-texts h2{
+  font-size: 50px;
+}
+
+.banner-inner .banner-img img{
+max-width: 500px;
+width: 100%;  
+}
+}
+
+@media only screen and (max-width: 840px){
+  .bannerComponent .banner-inner{
+    position: relative;
+  }
+
+  .bannerComponent .banner-img{
+    width: 50%;
+  }
+
+.banner-inner .first-texts p{
+  font-size: 16px;
+}
+
+.banner-inner .banner-texts hr{
+  max-width: 30px;
+  width: 100%;
+}
+
+.banner-inner .banner-bottom-texts p {
+ font-size: 16px;
+}
+
+.banner-inner .banner-texts h2{
+  font-size: 40px;
+}
+}
+
+@media only screen and (max-width: 600px){
+.bannerComponent{
+  padding-left: 20px;
+  padding-right: 20px;
+ }
+
+.bannerComponent .banner-inner{
+  flex-direction: column;
+  height: 100%;
+}
+.bannerComponent .banner-img{
+  max-width: 100%;
+   width: 100%;
+   max-height: 407px;
+   height: 100%;
+}
+.bannerComponent .banner-img img{
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.bannerComponent .banner-texts{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+}
+
+@media only screen and (max-width: 450px){
+.banner-inner .banner-texts h2 {
+    font-size: 35px;
+  }
+
+ .banner-inner .first-texts p {
+   font-size: 15px;
+ }
+
+.banner-inner .banner-bottom-texts p {
+  font-size: 15px;
+}
+
+}
