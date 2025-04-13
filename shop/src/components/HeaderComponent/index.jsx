@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './HeaderComponent.css'
 import headingText from '../../assets/heading-text.png';
 import searchImg from '../../assets/searchImg.png';
@@ -23,6 +23,23 @@ const HeaderComponent = () => {
     setSidebar(false);
   };
 
+  useEffect(() => {
+  const handleClickOutsideSidebar = (event) => {
+    if (sidebarMenuRef.current && !sidebarMenuRef.current.contains(event.target)) {
+      setSidebar(false);
+    }
+  };
+
+  if (sidebar) {
+    document.addEventListener('mousedown', handleClickOutsideSidebar);
+  } else {
+    document.removeEventListener('mousedown', handleClickOutsideSidebar);
+  }
+
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutsideSidebar);
+  };
+}, [sidebar]);
 
 
   const handleSearchClick = () => {
