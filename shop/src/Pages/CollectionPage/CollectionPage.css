@@ -260,9 +260,9 @@ transition: .2s ease-in-out;
   width: 30px;
 }
 
-
-  .collectionPage .main-search-input .closing-svg{
+  .collectionPage .main-search-input{
     padding-right: 20px;
+    padding-left: 20px;
   }
 }
 

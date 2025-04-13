@@ -20,6 +20,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: womenPinkTrousers,
         id: 1,
+        link: '/kidSlimTrouser',
       },
       {
         title: 'Men Round Neck Pure Cotton T-shirt',
@@ -27,6 +28,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: menStripeShirt,
         id: 2,
+        link: '/menCottonShirt',
       },
       {
         title: 'Boy Round Neck Pure Cotton T-shirt',
@@ -34,6 +36,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: boyBlueShirt,
         id: 3,
+        link: '/boyCottonShirt'
       },
       {
         title: 'Women Zip-Front Relaxed Fit Jacket',
@@ -41,6 +44,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: womenBlueJacket,
         id: 4,
+        link: '/womenBlueJakcet'
       },
       {
         title: 'Men Tapered Fit Flat-Front Trousers',
@@ -48,6 +52,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: menBlueTrousers,
         id: 5,
+        link: '/menBlueTrousers'
       },
       {
         title: 'Girls Round Neck Cotton Top',
@@ -55,6 +60,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: girlPinkShirt,
         id: 6,
+        link: '/girlCottonTop'
       },
       {
         title: 'Women Zip-Front Relaxed Fit Jacket',
@@ -62,6 +68,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: lightWomenJacket,
         id: 7,
+        link: '/womenZipJakcet'
       },
       {
         title: 'Kid Tapered Slim Fit Trouser',
@@ -69,6 +76,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: womenGreenTrousers,
         id: 8,
+        link: '/womenGreenTrousers'
       },
       {
         title: 'Men Printed Plain Cotton Shirt',
@@ -76,6 +84,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: menLightCottonShirt,
         id: 9,
+        link: '/menPlainShirt'
       },
       {
         title: 'Women Zip-Front Relaxed Fit Jacket',
@@ -83,6 +92,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: womenPinkJacket,
         id: 10,
+        link: '/womenFitJakcet'
       },
     ],
     toggleSearchBar: false,

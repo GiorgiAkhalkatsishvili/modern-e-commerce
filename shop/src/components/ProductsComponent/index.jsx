@@ -1,11 +1,19 @@
 import React from 'react'
 import './ProductsComponent.css';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 
 
 const ProductsComponent = () => {
   const products = useSelector((state) => state.products.products);
+
+  const navigate = useNavigate();
+
+  const handleClick = (link) => {
+    navigate(link);
+    window.scroll(0, 0);
+  }
 
   return (
     <div className='productsComponent'>
@@ -21,7 +29,9 @@ const ProductsComponent = () => {
         </div>
         <div className="products">
         {products.map((item, index) => (
-         <div key={index} className='eachProduct'>
+        <div
+          onClick={()=>handleClick(item.link)}
+           key={index} className='eachProduct'>
          <div className="product-img">
            <img src={item.img} alt={item.title}/>
             </div>

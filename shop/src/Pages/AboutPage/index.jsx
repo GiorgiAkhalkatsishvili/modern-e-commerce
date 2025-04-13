@@ -48,7 +48,7 @@ const AboutPage = () => {
               <p>We meticulously select and vet each product to ensure it meets our stringent quality standards.</p>
             </div>
           </div>
-          <div className="borderOne final-border-container">
+          <div id='final-border' className="borderOne final-border-container">
             <div className="border-texts">
               <h4>Quality Assurance:</h4>
               <p>We meticulously select and vet each product to ensure it meets our stringent quality standards.</p>

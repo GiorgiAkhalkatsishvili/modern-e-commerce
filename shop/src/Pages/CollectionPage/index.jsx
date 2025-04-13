@@ -2,11 +2,19 @@ import React from 'react';
 import './CollectionPage.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setToggleSearchBar } from '../../Redux/productsSlice';
+import { Navigate, useNavigate } from 'react-router';
 
 const CollectionPage = () => {
   const products = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
   const showSearchBar = useSelector(state => state.products.toggleSearchBar);
+  
+  const navigate = useNavigate();
+  
+    const handleClick = (link) => {
+      navigate(link);
+      window.scroll(0, 0);
+    }
   
   const handleCloseSearch = () => {
     dispatch(setToggleSearchBar(false));
@@ -90,7 +98,9 @@ const CollectionPage = () => {
           </div>
         <div className="products">
         {products.map((item, index) => (
-         <div key={index} className='eachProduct'>
+        <div
+          onClick={()=>handleClick(item.link)}
+           key={index} className='eachProduct'>
          <div className="product-img">
            <img src={item.img} alt={item.title}/>
             </div>
