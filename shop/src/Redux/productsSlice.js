@@ -20,6 +20,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: womenPinkTrousers,
         id: 1,
+        category: 'Women',
         link: '/kidSlimTrouser',
       },
       {
@@ -28,6 +29,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: menStripeShirt,
         id: 2,
+        category: 'Men',
         link: '/menCottonShirt',
       },
       {
@@ -36,6 +38,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: boyBlueShirt,
         id: 3,
+        category: 'Men',
         link: '/boyCottonShirt'
       },
       {
@@ -44,6 +47,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: womenBlueJacket,
         id: 4,
+        category: 'Women',
         link: '/womenBlueJakcet'
       },
       {
@@ -52,6 +56,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: menBlueTrousers,
         id: 5,
+        category: 'Men',
         link: '/menBlueTrousers'
       },
       {
@@ -60,6 +65,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: girlPinkShirt,
         id: 6,
+        category: 'Women',
         link: '/girlCottonTop'
       },
       {
@@ -68,6 +74,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: lightWomenJacket,
         id: 7,
+        category: 'Women',
         link: '/womenZipJakcet'
       },
       {
@@ -76,6 +83,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: womenGreenTrousers,
         id: 8,
+        category: 'Women',
         link: '/womenGreenTrousers'
       },
       {
@@ -84,6 +92,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: menLightCottonShirt,
         id: 9,
+        category: 'Men',
         link: '/menPlainShirt'
       },
       {
@@ -92,6 +101,7 @@ const productsSlice = createSlice({
         descirption: 'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
         img: womenPinkJacket,
         id: 10,
+        category: 'Women',
         link: '/womenFitJakcet'
       },
     ],

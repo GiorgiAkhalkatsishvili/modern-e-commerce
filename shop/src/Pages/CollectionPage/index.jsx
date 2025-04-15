@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './CollectionPage.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setToggleSearchBar } from '../../Redux/productsSlice';
@@ -8,6 +8,70 @@ const CollectionPage = () => {
   const products = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
   const showSearchBar = useSelector(state => state.products.toggleSearchBar);
+  const [inputValue, setInputValue] = useState('');
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [sortOption, setSortOption] = useState('');
+
+  useEffect(() => {
+  let filtered = products;
+
+
+  // Sort by price
+  if (sortOption === 'lowToHigh') {
+    filtered = [...filtered].sort((a, b) => a.price - b.price);
+  } else if (sortOption === 'highToLow') {
+    filtered = [...filtered].sort((a, b) => b.price - a.price);
+  }
+
+  setFilteredProducts(filtered);
+}, [inputValue, selectedCategories, products, sortOption]);
+
+
+  const handleCategoryChange = (e) => {
+  const { value, checked } = e.target;
+
+  if (checked) {
+    setSelectedCategories((prev) => [...prev, value]);
+  } else {
+    setSelectedCategories((prev) => prev.filter((cat) => cat !== value));
+  }
+};
+
+useEffect(() => {
+  let filtered = products;
+
+  if (inputValue !== '') {
+    filtered = filtered.filter((item) =>
+      item.title.toLowerCase().includes(inputValue.toLowerCase())
+    );
+  }
+
+  if (selectedCategories.length > 0) {
+    filtered = filtered.filter((item) =>
+      selectedCategories.includes(item.category)
+    );
+  }
+
+  setFilteredProducts(filtered);
+}, [inputValue, selectedCategories, products]);
+
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+    if (inputValue === '') {
+      setFilteredProducts(products);
+    } else {
+      const filtered = products.filter((item) => item.title.toLowerCase().includes(inputValue.toLowerCase()))
+      setFilteredProducts(filtered);
+    }
+  }
+
+  useEffect(() => {
+    if (inputValue === '') {
+      setFilteredProducts(products);
+    }
+  }, [inputValue, products])
   
   const navigate = useNavigate();
   
@@ -20,13 +84,17 @@ const CollectionPage = () => {
     dispatch(setToggleSearchBar(false));
   };
 
+
   return (
     <div className='collectionPage'>
       {showSearchBar && (
         <div className="main-search-input">
           <div className="input-texts">
             <div className="inp">
-              <input type="text" placeholder='Search' />
+              <input
+                value={inputValue}
+                onChange={handleInputChange}
+                type="text" placeholder='Search' />
             </div>
             <div className="closing-svg" onClick={handleCloseSearch}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -48,15 +116,24 @@ const CollectionPage = () => {
               </div>
               <div className="main-list">
                 <div className="listOne firstOption">
-                <input type="checkbox" />
+                  <input
+                value='Men'
+                onChange={(e) => handleCategoryChange(e)}
+                  type="checkbox" />
                 <p>Men</p>
                 </div>
                 <div className="listOne secondOption">
-                <input type="checkbox" />
+                  <input
+                  value='Women'
+                onChange={(e) => handleCategoryChange(e)}
+                  type="checkbox" />
                 <p>Women</p>
                 </div>
                 <div className="listOne thirdOption">
-                <input type="checkbox" />
+                  <input
+                    value='Women'
+                  onChange={(e) => handleCategoryChange(e)}  
+                  type="checkbox" />
                 <p>Kids</p>
                 </div>
               </div>
@@ -89,15 +166,15 @@ const CollectionPage = () => {
             <hr />
           </div>
           <div className="filter-options">
-            <select name="" id="">
+            <select value={sortOption} onChange={(e) => setSortOption(e.target.value)} name="" id="">
             <option value="">Sort by: Relevant</option>
-            <option value="">Sort by: Low to high</option>
-            <option value="">Sort by: High to low</option>
+            <option value="lowToHigh">Sort by: Low to high</option>
+            <option value="highToLow">Sort by: High to low</option>
          </select>
           </div>
           </div>
         <div className="products">
-        {products.map((item, index) => (
+        {filteredProducts.map((item, index) => (
         <div
           onClick={()=>handleClick(item.link)}
            key={index} className='eachProduct'>
