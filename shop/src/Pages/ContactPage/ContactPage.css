@@ -142,6 +142,10 @@ font-weight: 600;
 }
 
 @media only screen and (max-width: 840px){
+  .contactPage{
+    padding: 0 20px;
+  }
+  
   .contact-inner .main-img-texts{
     flex-direction: column;
     align-items: center;

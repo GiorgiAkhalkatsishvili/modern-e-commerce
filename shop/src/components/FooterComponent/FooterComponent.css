@@ -10,6 +10,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  border-bottom: solid 1px #9ca3af;
+  padding-bottom: 20px;
 }
 
 .footerComponent .footer-inner .main-heading{

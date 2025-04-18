@@ -16,6 +16,7 @@ import SeventhProductPage from './Pages/SeventhProductPage';
 import EighthProductPage from './Pages/EighthProductPage';
 import NinthProductPage from './Pages/NinthProductPage';
 import TenthProductPage from './Pages/TenthProductPage';
+import CartPage from './Pages/CartPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/collection' element={<CollectionPage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
+        <Route path='/cartPage' element={<CartPage/>}/>
         <Route path='/kidSlimTrouser' element={<FirstProductPage/>}/>
         <Route path='/menCottonShirt' element={<SecondProductPage/>}/>
         <Route path='/boyCottonShirt' element={<ThirdProductPage/>}/>

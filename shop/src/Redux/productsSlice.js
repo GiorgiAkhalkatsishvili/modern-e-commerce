@@ -106,13 +106,27 @@ const productsSlice = createSlice({
       },
     ],
     toggleSearchBar: false,
+    cartItems: [],
+    createAccount: false,
   },
   reducers: {
     setToggleSearchBar: (state, action) => {
   state.toggleSearchBar = action.payload
-    }
+    },
+    addToCartItems: (state, action) => {
+      const exists = state.cartItems.some(item => item.id === action.payload.id)
+      if (!exists) {
+        state.cartItems.push({...action.payload})
+      }
+    },
+    removeProduct: (state, action) => {
+      state.cartItems = state.cartItems.filter(item=>item.id !== action.payload)
+    },
+    createAccount: (state) => {
+      state.createAccount = true;
+   }
   }
 })
 
-export const { setToggleSearchBar, } = productsSlice.actions;
+export const { setToggleSearchBar, addToCartItems, removeProduct, createAccount } = productsSlice.actions;
 export default productsSlice.reducer;

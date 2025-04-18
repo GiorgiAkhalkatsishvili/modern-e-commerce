@@ -1,0 +1,118 @@
+
+.cartPage{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+
+.cartPage .cart-inner .main-cart-headings{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #9ca3af;
+  padding-bottom: 10px;
+}
+
+.cartPage .cart-inner .main-cart-headings h2{
+  color: #414141;
+  font-size: 22px;
+  font-weight: 450;
+}
+
+.cartPage .cart-inner .main-cart-headings ul{
+  display: flex;
+  gap: 30px;
+  padding-right: 30px;
+}
+
+.cartPage .cart-inner .main-cart-headings ul li{
+  list-style: none;
+  font-size: 19px;
+  font-weight: 500;
+  color: #414141;
+}
+
+.cartPage .product-img-texts{
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.cartPage .product-img-texts .product-img{
+  width: 100px;
+  border-radius: 2px;
+  height: 110px;
+}
+
+.cartPage .product-img-texts img{
+  padding: 8px;
+  height: 100%;
+  mix-blend-mode: darken;
+}
+
+.cartPage .product-img-texts .image-heading{
+display: flex;
+flex-direction: column;
+gap: 6px;
+margin-top: 4px;
+}
+
+.cartPage .product-img-texts .image-heading h4{
+font-weight: 450;
+font-size: 17px;
+}
+
+.cartPage .product-img-texts .image-heading p{
+font-size: 16px;
+cursor: pointer;
+color: #d30101;
+font-weight: 450;
+width: 0;
+}
+
+.cartPage .eachProduct{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #e5e7eb;
+  padding-bottom: 8px;
+}
+
+.cartPage .eachProduct .displayed-product-details ul{
+  display: flex;
+  padding-right: 30px;
+  gap: 63px;
+}
+
+.cartPage .eachProduct .displayed-product-details ul li{
+  color: #414141;
+    font-size: 18px;
+    font-weight: 450;
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 1240px){
+  .cartPage{
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+.cartPage .product-img-texts{
+  flex-direction: column;
+}
+
+.cartPage .eachProduct{
+  align-items: normal;
+}
+
+.cartPage .eachProduct .displayed-product-details ul{
+  margin-top: 50px;
+}
+
+.cartPage .product-img-texts{
+  gap: 8px;
+}
+}

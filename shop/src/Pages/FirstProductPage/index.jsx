@@ -1,14 +1,19 @@
 import React from 'react'
 import './FirstProductPage.css';
 import womenPinkTrousers from '../../assets/women-trousers.png';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import reviewStarImg from '../../assets/review-star.png';
-
+import { addToCartItems } from '../../Redux/productsSlice';
 
 const FirstProductPage = () => {
   const products = useSelector((state) => state.products.products);
+  const dispatch = useDispatch();
 
   const firstProduct = products[0];
+
+  const addItemToCart = () => {
+    dispatch(addToCartItems(firstProduct));
+  }
 
   return (
     <div className='firstProductPage'>
@@ -72,7 +77,7 @@ const FirstProductPage = () => {
             </div>
           </div>
           <div className="main-btn">
-            <button>ADD TO CART</button>
+            <button onClick={addItemToCart}>ADD TO CART</button>
           </div>
           <div className="border">
             <hr />

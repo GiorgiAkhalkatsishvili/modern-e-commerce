@@ -27,7 +27,6 @@ const FooterComponent = () => {
             </ul>
           </div>
       </div>
-      <hr />
       <div className="final-text">
         <p>Copyright 2024@ greatstack.dev - All Right Reserved.</p>
       </div>
