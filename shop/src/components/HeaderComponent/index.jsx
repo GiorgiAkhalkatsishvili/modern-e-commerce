@@ -38,6 +38,7 @@ const HeaderComponent = () => {
    dispatch(createAccount(true));
   };
 
+
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };

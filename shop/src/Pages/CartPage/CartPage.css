@@ -100,16 +100,21 @@ width: 0;
 }
 
 @media only screen and (max-width: 600px){
-.cartPage .product-img-texts{
+.cartPage .eachProduct{
+  align-items: normal;
   flex-direction: column;
 }
 
-.cartPage .eachProduct{
-  align-items: normal;
+.cartPage .eachProduct .displayed-product-details ul{
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  position: relative;
+  bottom: 40px;
 }
 
-.cartPage .eachProduct .displayed-product-details ul{
-  margin-top: 50px;
+.cartPage .cart-inner .main-cart-headings ul{
+  display: none;
 }
 
 .cartPage .product-img-texts{

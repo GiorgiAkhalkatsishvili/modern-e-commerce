@@ -1,21 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SecondProductPage.css';
 import menStripeShirt from '../../assets/men-stripe-shirt.png';
 import { useDispatch, useSelector } from 'react-redux';
 import reviewStarImg from '../../assets/review-star.png';
 import { addToCartItems } from '../../Redux/productsSlice';
-import { GoogleLogin } from '@react-oauth/google';
+import { createAccount } from '../../Redux/productsSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 
 const SecondProductPage = () => {
   const products = useSelector((state) => state.products.products);
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const accountCreated = useSelector((state) => state.products.createAccount);
   const dispatch = useDispatch();
 
   const secondProduct = products[1];
 
-  const addItemToCart = () => {
-      dispatch(addToCartItems(secondProduct));
-    }
+  const handleBookAppointment = () => {
+        if (!accountCreated) {
+          setMessage(
+      <div id='error-massage' className='error' style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
+        <FontAwesomeIcon icon={faCircleXmark} style={{ color: 'red', fontSize: '25px'}}/>
+        {' '}<p>You need to log in first!</p>
+            </div>
+          );
+    
+         } else {
+          setError(
+       <div id='success-massage' className='success'  style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
+        <FontAwesomeIcon icon={faCircleCheck} style={{ color: 'green', fontSize: '25px' }} />
+        {' '}<p>Product added successfully!</p>
+          </div>
+          );
+          dispatch(createAccount());
+          dispatch(addToCartItems(secondProduct));
+     }
+        setTimeout(() => {
+          setMessage('')
+          setError('')
+      },5000)
+      };
   
 
   return (
@@ -80,7 +106,23 @@ const SecondProductPage = () => {
             </div>
           </div>
           <div className="main-btn">
-            <button onClick={addItemToCart}>ADD TO CART</button>
+            <button onClick={handleBookAppointment}>ADD TO CART</button>
+            {
+              message?(
+             <div className="successful-message">
+             {message}
+                </div>
+              ) :
+              ('')
+              }
+              {
+                error ? (
+                  <div className="error-massage">
+                  {error}
+                  </div>
+                ) :
+               ('') 
+              }
           </div>
           <div className="border">
             <hr />

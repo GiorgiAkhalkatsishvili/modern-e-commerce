@@ -1,19 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './FirstProductPage.css';
 import womenPinkTrousers from '../../assets/women-trousers.png';
 import { useDispatch, useSelector } from 'react-redux';
 import reviewStarImg from '../../assets/review-star.png';
 import { addToCartItems } from '../../Redux/productsSlice';
+import { createAccount } from '../../Redux/productsSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 const FirstProductPage = () => {
   const products = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const accountCreated = useSelector((state)=>state.products.createAccount)
 
   const firstProduct = products[0];
 
-  const addItemToCart = () => {
-    dispatch(addToCartItems(firstProduct));
-  }
+  const handleBookAppointment = () => {
+      if (!accountCreated) {
+        setMessage(
+    <div id='error-massage' className='error' style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
+      <FontAwesomeIcon icon={faCircleXmark} style={{ color: 'red', fontSize: '25px'}}/>
+      {' '}<p>You need to log in first!</p>
+          </div>
+        );
+  
+       } else {
+        setError(
+     <div id='success-massage' className='success'  style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
+      <FontAwesomeIcon icon={faCircleCheck} style={{ color: 'green', fontSize: '25px' }} />
+      {' '}<p>Product added successfully!</p>
+        </div>
+        );
+        dispatch(createAccount());
+        dispatch(addToCartItems(firstProduct));
+   }
+      setTimeout(() => {
+        setMessage('')
+        setError('')
+    },5000)
+    };
 
   return (
     <div className='firstProductPage'>
@@ -77,7 +104,23 @@ const FirstProductPage = () => {
             </div>
           </div>
           <div className="main-btn">
-            <button onClick={addItemToCart}>ADD TO CART</button>
+            <button onClick={handleBookAppointment}>ADD TO CART</button>
+            {
+              message?(
+             <div className="successful-message">
+             {message}
+                </div>
+              ) :
+              ('')
+              }
+              {
+                error ? (
+                  <div className="error-massage">
+                  {error}
+                  </div>
+                ) :
+               ('') 
+              }
           </div>
           <div className="border">
             <hr />
