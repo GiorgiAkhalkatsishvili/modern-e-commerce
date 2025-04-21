@@ -18,7 +18,7 @@ const SecondProductPage = () => {
 
   const secondProduct = products[1];
 
-  const handleBookAppointment = () => {
+  const handleAddProduct = () => {
         if (!accountCreated) {
           setMessage(
       <div id='error-massage' className='error' style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
@@ -106,7 +106,7 @@ const SecondProductPage = () => {
             </div>
           </div>
           <div className="main-btn">
-            <button onClick={handleBookAppointment}>ADD TO CART</button>
+            <button onClick={handleAddProduct}>ADD TO CART</button>
             {
               message?(
              <div className="successful-message">

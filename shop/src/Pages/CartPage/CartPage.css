@@ -93,6 +93,109 @@ width: 0;
     list-style-type: none;
 }
 
+.cartPage .items-summaray-container{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 70px;
+}
+
+.cartPage .items-summaray-container .container{
+  border: solid 1px #9ca3af;
+  border-radius: 4px;
+  max-width: 330px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.cartPage .items-summaray-container h2{
+  font-size: 28px;
+  color: #414141;
+  font-weight: 500;
+  font-family: serif;
+  margin-top: 13px;
+  border-bottom: solid 1px #e5e7eb;
+  margin-bottom: 30px;
+  padding-bottom: 3px;
+}
+
+.cart-inner .items-summaray-container .total-price{
+border-bottom: solid 1px #e5e7eb;
+padding-bottom: 3px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.cart-inner .items-summaray-container .total-price p{
+padding-bottom: 3px;
+font-size: 18px;
+}
+
+.cart-inner .items-summaray-container .total-price span{
+padding-bottom: 3px;
+font-size: 18px;
+}
+
+.cart-inner .items-summaray-container .shipping-text{
+border-bottom: solid 1px #e5e7eb;
+padding-bottom: 3px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.cart-inner .items-summaray-container .shipping-text p{
+font-size: 18px;
+margin-top: 25px;
+}
+
+.cart-inner .items-summaray-container .shipping-text span{
+font-size: 18px;
+margin-top: 25px;
+}
+
+.cart-inner .items-summaray-container .final-total-price{
+padding-bottom: 8px;
+font-size: 18px;
+margin-top: 25px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.cart-inner .items-summaray-container .final-total-price p{
+font-size: 18px;
+}
+
+.cart-inner .items-summaray-container .final-total-price span{
+font-size: 18px;
+}
+
+.cart-inner .items-summaray-container .cart-payment-button{
+  max-width: 330px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.cart-inner .items-summaray-container .cart-payment-button button{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 17px;
+  border: solid 1px #000;
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.cart-inner .items-summaray-container .cart-payment-button button:hover{
+  background-color: #545454;
+  border: solid 1px #545454;
+}
+
 @media only screen and (max-width: 1240px){
   .cartPage{
     padding: 0 30px;
@@ -108,9 +211,9 @@ width: 0;
 .cartPage .eachProduct .displayed-product-details ul{
   display: flex;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 20px;
   position: relative;
-  bottom: 40px;
+  bottom: 35px;
 }
 
 .cartPage .cart-inner .main-cart-headings ul{

@@ -4,10 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import iconOne from '../../assets/iconOne.png'
 import iconTwo from '../../assets/iconTwo.png'
 import iconThree from '../../assets/iconThree.png'
+import { useNavigate } from 'react-router';
 
 const BestSellersProducts = () => {
   const products = useSelector((state) => state.products.products);
+  const navigate = useNavigate();
 
+
+  const handleClick = (link) => {
+    navigate(link);
+    window.scroll(0, 0);
+  }
   
   const firstFiveProducts = products.slice(0, 5);
 
@@ -23,7 +30,9 @@ const BestSellersProducts = () => {
         </div>
         <div className="products">
          {firstFiveProducts.map((item, index) => (
-            <div key={index} className='eachProduct'>
+           <div
+             onClick={()=>handleClick(item.link)}
+             key={index} className='eachProduct'>
               <div className="product-img">
                 <img src={item.img} alt={item.title} />
               </div>

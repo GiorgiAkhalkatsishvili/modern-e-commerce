@@ -161,6 +161,121 @@
   font-weight: 450;
 }
 
+.error p {
+  font-size: 17px;
+}
+
+.success p {
+  font-size: 17px;
+}
+
+.error-massage {
+  position: fixed;
+  top: 60px;
+  right: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px #0000001a;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.error-massage:after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: green;
+  animation: widthShrink 4s linear forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.successful-message, .success-massage, .error-massage {
+  position: fixed;
+  top: 60px;
+  right: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px #0000001a;
+  font-weight: 500;
+  margin: 15px 0;
+  transform: translateX(100%);
+  animation: popInAndStay 1s ease-out forwards, disappear 1s ease-out 4s forwards;
+}
+
+.successful-message::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: red;
+  animation: widthShrink 4s linear forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes popInAndStay {
+  0% {
+    transform: translateX(100%);
+    width: 0;
+  }
+
+  10% {
+    transform: translateX(0);
+    width: 300px;
+  }
+
+  80% {
+    transform: translateX(0);
+    width: 300px;
+  }
+
+  100% {
+    transform: translateX(0);
+    width: 300px;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    transform: translateX(0);
+    width: 300px;
+  }
+
+  100% {
+    transform: translateX(100%);
+    width: 0;
+    right: -50%;
+  }
+}
+
+@keyframes widthShrink {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
 @media only screen and (max-width: 1240px) {
   .thirdProductPage {
     padding: 0 30px;
