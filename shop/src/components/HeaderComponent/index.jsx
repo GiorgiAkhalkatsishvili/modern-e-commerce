@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './HeaderComponent.css'
 import headingText from '../../assets/heading-text.png';
 import searchImg from '../../assets/searchImg.png';
-import userImg from '../../assets/userImg.png';
+import userImg from '../../assets/userImg.png'
 import cartImg from '../../assets/cartImg.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';

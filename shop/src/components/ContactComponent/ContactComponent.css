@@ -28,10 +28,16 @@ line-height: 32px;
   display: flex;
   justify-content: center;
   margin-top: 30px;
+    width: 100%;
+}
+
+.contact-inner .main-input form{
+  display: flex;
+  max-width: 520px;
+  width: 100%;
 }
 
 .contact-inner .main-input input{
-  max-width: 400px;
   width: 100%;
   padding: 15px 15px;
   font-size: 17px;

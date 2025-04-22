@@ -110,6 +110,12 @@ font-weight: 600;
   margin-top: 30px;
 }
 
+.contact-form-inner .main-input form{
+display: flex;
+  max-width: 520px;
+  width: 100%;
+}
+
 .contact-form-inner .main-input input {
   max-width: 400px;
   width: 100%;

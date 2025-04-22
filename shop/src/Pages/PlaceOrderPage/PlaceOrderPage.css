@@ -1,0 +1,31 @@
+
+.placeOrderPage{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.placeOrderPage .inner .main-heading{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.placeOrderPage .inner .main-heading hr{
+border: solid 1px #414141;
+ height: 2.5px;
+background-color: #414141;
+  width: 50px;
+}
+
+.placeOrderPage .inner .main-heading h1{
+  color: #6b7280;
+  font-weight: 450;
+  font-size: 28px;
+}
+
+.placeOrderPage .inner .main-heading span{
+color: #374151;
+ font-weight: 500;
+}

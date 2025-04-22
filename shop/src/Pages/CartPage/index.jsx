@@ -2,10 +2,12 @@ import React from 'react'
 import './CartPage.css'
 import { useDispatch, useSelector } from 'react-redux';
 import {removeProduct} from '../../Redux/productsSlice'
+import { useNavigate } from 'react-router-dom';
 
 const CartPage = () => {
   const cartItemsArray = useSelector((state) => state.products.cartItems);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleRemoveProduct = (id) => {
     dispatch(removeProduct(id));
@@ -18,6 +20,14 @@ const CartPage = () => {
 }, 0);
   
   const roundedTotalPrice = Math.round(totalPrice * 100) / 100;
+
+  const navigateToOrderPlace = () => {
+    if (cartItemsArray.length > 0) {
+      navigate('/PlaceOrder')
+    } else {
+      alert('no items in the cart')
+    }
+  }
 
   return (
     <div className='cartPage'>
@@ -43,7 +53,7 @@ const CartPage = () => {
       </div>
       <div className="displayed-product-details">
         <ul>
-          <li>{item.price}</li>
+          <li id='itemPrice'>{item.price}</li>
           <li>1</li>
             <li>{item.price}</li>
         </ul>
@@ -61,7 +71,7 @@ const CartPage = () => {
             </div>
             <div className="shipping-text">
               <p>Shipping</p>
-              <span>Free</span>
+              <span>$5</span>
             </div>
             <div className="final-total-price">
               <p>Total</p>
@@ -69,7 +79,7 @@ const CartPage = () => {
             </div>
           </div>
           <div className="cart-payment-button">
-          <button>Proceed checkout</button>
+          <button onClick={navigateToOrderPlace}>Proceed checkout</button>
           </div>
       </div>
    </div>

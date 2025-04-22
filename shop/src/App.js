@@ -17,6 +17,7 @@ import EighthProductPage from './Pages/EighthProductPage';
 import NinthProductPage from './Pages/NinthProductPage';
 import TenthProductPage from './Pages/TenthProductPage';
 import CartPage from './Pages/CartPage';
+import PlaceOrderPage from './Pages/PlaceOrderPage';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path='/womenGreenTrousers' element={<EighthProductPage/>}/>
         <Route path='/menPlainShirt' element={<NinthProductPage/>}/>
         <Route path='/womenFitJakcet' element={<TenthProductPage/>}/>
+        <Route path='/PlaceOrder' element={<PlaceOrderPage/>}/>
         </Routes>
       <FooterComponent />
     </Router>
