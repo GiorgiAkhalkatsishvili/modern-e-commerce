@@ -165,6 +165,7 @@ justify-content: space-between;
 
 .cart-inner .items-summaray-container .final-total-price p{
 font-size: 18px;
+  font-weight: 500;
 }
 
 .cart-inner .items-summaray-container .final-total-price span{
@@ -204,6 +205,11 @@ font-size: 18px;
   flex-direction: column;
 }
 
+.cartPage .items-summaray-container{
+  justify-content: center;
+  align-items: center;
+}
+
 .cartPage .eachProduct .displayed-product-details ul{
   display: flex;
   justify-content: flex-end;
@@ -224,4 +230,8 @@ font-size: 18px;
   display: none;
 }
 
+.cart-inner .items-summaray-container .cart-payment-button{
+  max-width: 330px;
+    width: 100%;
+}
 }
