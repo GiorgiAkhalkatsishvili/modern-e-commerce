@@ -224,6 +224,14 @@ transition: .2s ease-in-out;
     grid-template-columns: repeat(3, 1fr);
   }
 
+   .second-column-content .products .product-img {
+   height: auto;
+ }
+
+ .second-column-content .products .product-img img {
+   height: auto;
+ }
+
 .second-column-content .products .product-img img{
   height: 100%;
 }
@@ -232,6 +240,10 @@ transition: .2s ease-in-out;
 @media only screen and (max-width: 840px){
  .collectionPage .first-column-content{
   display: none;
+ }
+
+ .second-column-content .products .product-title p{
+  max-width: 150px;
  }
 }
 
