@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CartPage.css'
 import { useDispatch, useSelector } from 'react-redux';
 import {removeProduct} from '../../Redux/productsSlice'
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+
 
 const CartPage = () => {
   const cartItemsArray = useSelector((state) => state.products.cartItems);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [error, setError] = useState('');
 
   const handleRemoveProduct = (id) => {
     dispatch(removeProduct(id));
@@ -23,11 +27,18 @@ const CartPage = () => {
 
   const navigateToOrderPlace = () => {
     if (cartItemsArray.length > 0) {
-      navigate('/PlaceOrder')
+      navigate('/PlaceOrder');
+      window.scroll(0, 0);
     } else {
-      alert('no items in the cart')
+      setError(
+      <div id='warning-notification' className='warning' style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
+      <FontAwesomeIcon icon={faCircleExclamation}  style={{ color: 'orange', fontSize: '25px' }} />
+      {' '}<p>You do not have items in the cart!</p>
+    </div>
+    )
     }
   }
+
 
   return (
     <div className='cartPage'>
@@ -81,6 +92,14 @@ const CartPage = () => {
           <div className="cart-payment-button">
           <button onClick={navigateToOrderPlace}>Proceed checkout</button>
           </div>
+        {
+         error ? (
+         <div className="warning-massage">
+          {error}
+        </div>
+         ) :
+       ('') 
+        }
       </div>
    </div>
 </div>

@@ -169,24 +169,6 @@
   font-size: 17px;
 }
 
-.error-massage {
-  position: fixed;
-  top: 60px;
-  right: 30px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  overflow: hidden;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 5px;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px #0000001a;
-  font-weight: 500;
-  margin: 15px 0;
-}
 
 .error-massage:after {
   content: '';
