@@ -179,10 +179,4 @@ width: 45px;
 padding: 0 10px;
   }
 
-.bestSellersProducts .products .product-title p {
-  max-width: 190px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 }
