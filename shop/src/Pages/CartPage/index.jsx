@@ -4,17 +4,29 @@ import { useDispatch, useSelector } from 'react-redux';
 import {removeProduct} from '../../Redux/productsSlice'
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'react-toastify';
 
 
 const CartPage = () => {
   const cartItemsArray = useSelector((state) => state.products.cartItems);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [error, setError] = useState('');
 
   const handleRemoveProduct = (id) => {
     dispatch(removeProduct(id));
+    toast.success(
+      <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+        <span>Product removed from cart!</span>
+      </div>,
+      {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      }
+    );
   }
 
   const totalPrice = cartItemsArray.reduce((total, item) => {
@@ -30,12 +42,19 @@ const CartPage = () => {
       navigate('/PlaceOrder');
       window.scroll(0, 0);
     } else {
-      setError(
-      <div id='warning-notification' className='warning' style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
-      <FontAwesomeIcon icon={faCircleExclamation}  style={{ color: 'orange', fontSize: '25px' }} />
-      {' '}<p>You do not have items in the cart!</p>
-    </div>
-    )
+      toast.warning(
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          <span>You do not have items in the cart!</span>
+        </div>,
+        {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        }
+      );
     }
   }
 
@@ -92,14 +111,6 @@ const CartPage = () => {
           <div className="cart-payment-button">
           <button onClick={navigateToOrderPlace}>Proceed checkout</button>
           </div>
-        {
-         error ? (
-         <div className="warning-massage">
-          {error}
-        </div>
-         ) :
-       ('') 
-        }
       </div>
    </div>
 </div>

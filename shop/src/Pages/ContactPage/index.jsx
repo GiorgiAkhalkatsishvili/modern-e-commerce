@@ -1,8 +1,14 @@
 import React from 'react'
 import './ContactPage.css';
 import contactImg from '../../assets/contact-img.png';
+import { toast } from 'react-toastify';
 
 const ContactPage = () => {
+
+  const alertNotification = () => {
+    toast.warning('Feature is not available for now')
+  }
+
   return (
     <div className='contactPage'>
       <div className="contact-inner">
@@ -33,7 +39,7 @@ Email: admin@forever.com</p>
               <p>Learn more about our teams and job openings.</p>
             </div>
             <div className="contact-btn">
-              <button>Explore Jobs</button>
+              <button onClick={alertNotification}>Explore Jobs</button>
             </div>
           </div>
         </div>

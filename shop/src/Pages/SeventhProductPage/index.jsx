@@ -5,41 +5,50 @@ import { useDispatch, useSelector } from 'react-redux';
 import reviewStarImg from '../../assets/review-star.png';
 import { addToCartItems } from '../../Redux/productsSlice';
 import { createAccount } from '../../Redux/productsSlice';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'react-toastify';
 
 const SeventhProductPage = () => {
   const products = useSelector((state) => state.products.products);
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
   const accountCreated = useSelector((state) => state.products.createAccount);
   const dispatch = useDispatch();
 
   const seventhProduct = products[6];
 
   const handleAddProduct = () => {
-                if (!accountCreated) {
-                  setMessage(
-              <div id='error-massage' className='error' style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
-                <FontAwesomeIcon icon={faCircleXmark} style={{ color: 'red', fontSize: '25px'}}/>
-                {' '}<p>You need to log in first!</p>
-                    </div>
-                  );
-                 } else {
-                  setError(
-               <div id='success-massage' className='success'  style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
-                <FontAwesomeIcon icon={faCircleCheck} style={{ color: 'green', fontSize: '25px' }} />
-                {' '}<p>Product added successfully!</p>
-                  </div>
-                  );
-                  dispatch(createAccount());
-                  dispatch(addToCartItems(seventhProduct));
-             }
-                setTimeout(() => {
-                  setMessage('')
-                  setError('')
-              },5000)
-      };
+    if (!accountCreated) {
+      toast.error(
+        <div className="custom-toast-message">
+          <span>You need to log in first!</span>
+        </div>,
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          className: "custom-toast custom-toast-error"
+        }
+      );
+    } else {
+      toast.success(
+        <div className="custom-toast-message">
+          <span>Product added successfully!</span>
+        </div>,
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          className: "custom-toast custom-toast-success"
+        }
+      );
+      dispatch(createAccount());
+      dispatch(addToCartItems(seventhProduct));
+    }
+  };
 
   return (
     <div className='seventhProductPage'>
@@ -105,22 +114,6 @@ const SeventhProductPage = () => {
           <div className="main-btn">
             <button onClick={handleAddProduct}>ADD TO CART</button>
           </div>
-          {
-              message?(
-             <div className="successful-message">
-             {message}
-                </div>
-              ) :
-              ('')
-              }
-              {
-                error ? (
-                  <div className="error-massage">
-                  {error}
-                  </div>
-                ) :
-               ('') 
-            }
           <div className="border">
             <hr />
           </div>

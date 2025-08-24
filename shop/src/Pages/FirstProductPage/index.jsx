@@ -7,40 +7,50 @@ import { addToCartItems } from '../../Redux/productsSlice';
 import { createAccount } from '../../Redux/productsSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'react-toastify';
 
 const FirstProductPage = () => {
   const products = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const accountCreated = useSelector((state)=>state.products.createAccount)
+  const accountCreated = useSelector((state) => state.products.createAccount);
 
   const firstProduct = products[0];
 
   const handleAddProduct = () => {
-      if (!accountCreated) {
-        setMessage(
-    <div id='error-massage' className='error' style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
-      <FontAwesomeIcon icon={faCircleXmark} style={{ color: 'red', fontSize: '25px'}}/>
-      {' '}<p>You need to log in first!</p>
-          </div>
-        );
-  
-       } else {
-        setError(
-     <div id='success-massage' className='success'  style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
-      <FontAwesomeIcon icon={faCircleCheck} style={{ color: 'green', fontSize: '25px' }} />
-      {' '}<p>Product added successfully!</p>
-        </div>
-        );
-        dispatch(createAccount());
-        dispatch(addToCartItems(firstProduct));
-   }
-      setTimeout(() => {
-        setMessage('')
-        setError('')
-    },5000)
-    };
+    if (!accountCreated) {
+      toast.error(
+        <div className="custom-toast-message">
+          <span>You need to log in first!</span>
+        </div>,
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          className: "custom-toast custom-toast-error"
+        }
+      );
+    } else {
+      toast.success(
+        <div className="custom-toast-message">
+          <span>Product added successfully!</span>
+        </div>,
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          className: "custom-toast custom-toast-success"
+        }
+      );
+      dispatch(createAccount());
+      dispatch(addToCartItems(firstProduct));
+    }
+  };
 
   return (
     <div className='firstProductPage'>
@@ -105,22 +115,6 @@ const FirstProductPage = () => {
           </div>
           <div className="main-btn">
             <button onClick={handleAddProduct}>ADD TO CART</button>
-            {
-              message?(
-             <div className="successful-message">
-             {message}
-                </div>
-              ) :
-              ('')
-              }
-              {
-                error ? (
-                  <div className="error-massage">
-                  {error}
-                  </div>
-                ) :
-               ('') 
-              }
           </div>
           <div className="border">
             <hr />
@@ -130,12 +124,12 @@ const FirstProductPage = () => {
           </div>
         </div>
       </div>
-    <div className="bottom-description-borders">
-      <div className="headingOne">
-        <h4>Description</h4>
-      </div>
-      <div className="headingTwo">
-        <h4>Reviews</h4>
+      <div className="bottom-description-borders">
+        <div className="headingOne">
+          <h4>Description</h4>
+        </div>
+        <div className="headingTwo">
+          <h4>Reviews</h4>
         </div>
       </div>
       <div className="main-paragraph">
@@ -143,8 +137,8 @@ const FirstProductPage = () => {
           <br />
           <br />
           <span>E-commerce websites typically display products or services along with detailed descriptions, images, prices, and any available variations (e.g., sizes, colors). Each product usually has its own dedicated page with relevant information.</span>
-          </p>
-        </div>
+        </p>
+      </div>
     </div>
   )
 }

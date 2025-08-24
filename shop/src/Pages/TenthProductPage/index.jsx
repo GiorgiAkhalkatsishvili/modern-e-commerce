@@ -5,40 +5,49 @@ import { useDispatch, useSelector } from 'react-redux';
 import reviewStarImg from '../../assets/review-star.png';
 import { addToCartItems } from '../../Redux/productsSlice';
 import { createAccount } from '../../Redux/productsSlice';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'react-toastify';
 
 const TenthProductPage = () => {
   const products = useSelector((state) => state.products.products);
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
   const accountCreated = useSelector((state) => state.products.createAccount);
   const dispatch = useDispatch();
 
-  const TenthProduct = products[9];
+  const tenthProduct = products[9];
 
   const handleAddProduct = () => {
-      if (!accountCreated) {
-        setMessage(
-       <div id='error-massage' className='error' style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
-       <FontAwesomeIcon icon={faCircleXmark} style={{ color: 'red', fontSize: '25px'}}/>
-          {' '}<p>You need to log in first!</p>
-          </div>
+    if (!accountCreated) {
+      toast.error(
+        <div className="custom-toast-message">
+          <span>You need to log in first!</span>
+        </div>,
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          className: "custom-toast custom-toast-error"
+        }
       );
     } else {
-     setError(
-      <div id='success-massage' className='success'  style={{width: '280px', display: 'flex', gap: '10px', alignItems: 'center'}}>
-       <FontAwesomeIcon icon={faCircleCheck} style={{ color: 'green', fontSize: '25px' }} />
-       {' '}<p>Product added successfully!</p>
-       </div>
-        );
-       dispatch(createAccount());
-       dispatch(addToCartItems(TenthProduct));
-     }
-      setTimeout(() => {
-      setMessage('')
-     setError('')
-     },5000)
+      toast.success(
+        <div className="custom-toast-message">
+          <span>Product added successfully!</span>
+        </div>,
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          className: "custom-toast custom-toast-success"
+        }
+      );
+      dispatch(createAccount());
+      dispatch(addToCartItems(tenthProduct));
+    }
   };
 
   return (
@@ -54,7 +63,7 @@ const TenthProductPage = () => {
         </div>
         <div className="main-product-description">
           <div className="main-heading">
-            <h1>{TenthProduct.title}</h1>
+            <h1>{tenthProduct.title}</h1>
           </div>
           <div className="review-images">
             <div className="imageOne">
@@ -75,10 +84,10 @@ const TenthProductPage = () => {
             <p>(122)</p>
           </div>
           <div className="product-price">
-            <h3>{TenthProduct.price}</h3>
+            <h3>{tenthProduct.price}</h3>
           </div>
           <div className="product-paragraph">
-            <p>{TenthProduct.descirption}</p>
+            <p>{tenthProduct.descirption}</p>
           </div>
           <div className="product-size-options">
             <div className="heading">
@@ -105,22 +114,6 @@ const TenthProductPage = () => {
           <div className="main-btn">
             <button onClick={handleAddProduct}>ADD TO CART</button>
           </div>
-          {
-              message?(
-             <div className="successful-message">
-             {message}
-                </div>
-              ) :
-              ('')
-              }
-              {
-                error ? (
-                  <div className="error-massage">
-                  {error}
-                  </div>
-                ) :
-               ('') 
-            }
           <div className="border">
             <hr />
           </div>
@@ -129,12 +122,12 @@ const TenthProductPage = () => {
           </div>
         </div>
       </div>
-    <div className="bottom-description-borders">
-      <div className="headingOne">
-        <h4>Description</h4>
-      </div>
-      <div className="headingTwo">
-        <h4>Reviews</h4>
+      <div className="bottom-description-borders">
+        <div className="headingOne">
+          <h4>Description</h4>
+        </div>
+        <div className="headingTwo">
+          <h4>Reviews</h4>
         </div>
       </div>
       <div className="main-paragraph">

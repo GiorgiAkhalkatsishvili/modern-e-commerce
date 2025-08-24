@@ -18,6 +18,8 @@ import NinthProductPage from './Pages/NinthProductPage';
 import TenthProductPage from './Pages/TenthProductPage';
 import CartPage from './Pages/CartPage';
 import PlaceOrderPage from './Pages/PlaceOrderPage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -43,6 +45,7 @@ function App() {
         <Route path='/PlaceOrder' element={<PlaceOrderPage/>}/>
         </Routes>
       <FooterComponent />
+      <ToastContainer />
     </Router>
   </div>
   );

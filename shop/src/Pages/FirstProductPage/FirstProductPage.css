@@ -1,65 +1,64 @@
-
-.firstProductPage{
+.firstProductPage {
   max-width: 1200px;
   width: 100%;
   margin: auto;
   margin-top: 60px;
 }
 
-.firstProductPage .product-inner{
+.firstProductPage .product-inner {
   display: flex;
   gap: 50px;
 }
 
-.firstProductPage .product-inner .main-product-images{
+.firstProductPage .product-inner .main-product-images {
   display: flex;
   gap: 10px;
 }
 
-.firstProductPage .product-inner .main-product-images .small-image img{
+.firstProductPage .product-inner .main-product-images .small-image img {
   max-width: 100px;
   width: 100%;
   cursor: pointer;
 }
 
-.firstProductPage .product-inner .main-product-images .main-image img{
-width: 100%;
-height: 100%;
+.firstProductPage .product-inner .main-product-images .main-image img {
+  width: 100%;
+  height: 100%;
 }
 
-.product-inner .main-product-description .main-heading h1{
+.product-inner .main-product-description .main-heading h1 {
   font-size: 30px;
   line-height: 32px;
   font-weight: 500;
 }
 
-.product-inner .main-product-description .review-images{
+.product-inner .main-product-description .review-images {
   display: flex;
   align-items: center;
   gap: 5px;
   margin-top: 10px;
 }
 
-.product-inner .main-product-description .review-images img{
+.product-inner .main-product-description .review-images img {
   width: 13px;
 }
 
-.product-inner .main-product-description .review-images p{
+.product-inner .main-product-description .review-images p {
   font-weight: 450;
   font-size: 17px;
 }
 
-.product-inner .main-product-description .product-price h3{
+.product-inner .main-product-description .product-price h3 {
   font-size: 32px;
   margin-top: 20px;
   font-weight: 500;
 }
 
-.product-inner .main-product-description .product-paragraph{
+.product-inner .main-product-description .product-paragraph {
   margin-top: 20px;
 }
 
-.product-inner .main-product-description .product-paragraph p{
+.product-inner .main-product-description .product-paragraph p {
   max-width: 500px;
   width: 100%;
   color: #6b7280;
@@ -67,17 +66,17 @@ height: 100%;
   font-weight: 450;
 }
 
-.product-inner .product-size-options .heading h3{
-font-weight: 500;
-margin-top: 30px;
+.product-inner .product-size-options .heading h3 {
+  font-weight: 500;
+  margin-top: 30px;
 }
 
-.product-inner .product-size-options .size-container{
+.product-inner .product-size-options .size-container {
   display: flex;
   gap: 8px;
 }
 
-.product-inner .product-size-options .size-container .sizeOne{
+.product-inner .product-size-options .size-container .sizeOne {
   border: solid 1px #e5e7eb;
   padding: 8px 15px;
   margin-top: 15px;
@@ -85,16 +84,16 @@ margin-top: 30px;
   cursor: pointer;
 }
 
-.product-inner .product-size-options .size-container .sizeOne h4{
- font-weight: 450; 
- font-size: 18px;
+.product-inner .product-size-options .size-container .sizeOne h4 {
+  font-weight: 450;
+  font-size: 18px;
 }
 
-.product-inner .main-product-description .main-btn{
+.product-inner .main-product-description .main-btn {
   margin-top: 30px;
 }
 
-.product-inner .main-product-description .main-btn button{
+.product-inner .main-product-description .main-btn button {
   padding: 12px 30px;
   font-size: 16px;
   background-color: #000;
@@ -103,30 +102,30 @@ margin-top: 30px;
   cursor: pointer;
 }
 
-.product-inner .main-product-description .border{
+.product-inner .main-product-description .border {
   margin-top: 20px;
 }
 
-.product-inner .main-product-description .border hr{
+.product-inner .main-product-description .border hr {
   border: solid 1px #e5e7eb;
 }
 
-.product-inner .main-product-description .final-descrepiton-texts p{
-      max-width: 500px;
-        width: 100%;
-        color: #6b7280;
-        font-size: 16px;
-        font-weight: 450;
-        line-height: 30px;
-        padding-bottom: 5px;
+.product-inner .main-product-description .final-descrepiton-texts p {
+  max-width: 500px;
+  width: 100%;
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 30px;
+  padding-bottom: 5px;
 }
 
-.firstProductPage .bottom-description-borders{
+.firstProductPage .bottom-description-borders {
   display: flex;
   margin-top: 60px;
 }
 
-.firstProductPage .bottom-description-borders .headingOne{
+.firstProductPage .bottom-description-borders .headingOne {
   border: solid 1px #e5e7eb;
   max-width: 110px;
   width: 100%;
@@ -134,11 +133,11 @@ margin-top: 30px;
   text-align: center;
 }
 
-.firstProductPage .bottom-description-borders .headingOne h4{
+.firstProductPage .bottom-description-borders .headingOne h4 {
   font-size: 17px;
 }
 
-.firstProductPage .bottom-description-borders .headingTwo{
+.firstProductPage .bottom-description-borders .headingTwo {
   border: solid 1px #e5e7eb;
   max-width: 110px;
   width: 100%;
@@ -147,149 +146,96 @@ margin-top: 30px;
   text-align: center;
 }
 
-.firstProductPage .bottom-description-borders .headingTwo h4{
-font-weight: 400;
-font-size: 17px;
+.firstProductPage .bottom-description-borders .headingTwo h4 {
+  font-weight: 400;
+  font-size: 17px;
 }
 
-.firstProductPage .main-paragraph{
+.firstProductPage .main-paragraph {
   border: solid 1px #e5e7eb;
   padding: 12px 15px;
 }
 
-.firstProductPage .main-paragraph p{
-color: #6b7280;
-font-weight: 450;
+.firstProductPage .main-paragraph p {
+  color: #6b7280;
+  font-weight: 450;
 }
 
 
-.error p {
-  font-size: 17px;
+.custom-toast {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  font-family: Arial, sans-serif !important;
 }
 
-.success p {
-  font-size: 17px;
-}
-
-.error-massage{
-  position: fixed;
-  top: 60px;
-  right: 30px;
+.custom-toast-message {
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  overflow: hidden;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 5px;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px #0000001a;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
   font-weight: 500;
-  margin: 15px 0;
 }
 
-.error-massage:after {
-content: '';
-  width: 100%;
-  height: 4px;
-  background-color: green;
-  animation: widthShrink 4s linear forwards;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.successful-message, .success-massage, .error-massage {
-  position: fixed;
-  top: 60px;
-  right: 30px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  overflow: hidden;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 5px;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px #0000001a;
+.custom-toast-message span {
+  font-size: 18px;
   font-weight: 500;
-  margin: 15px 0;
-  transform: translateX(100%);
-  animation: popInAndStay 1s ease-out forwards, disappear 1s ease-out 4s forwards;
 }
 
-.successful-message::after {
-  content: '';
-  width: 100%;
-  height: 4px;
-  background-color: red;
-  animation: widthShrink 4s linear forwards;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.toast-icon {
+  font-size: 22px;
+  min-width: 22px;
 }
 
-@keyframes popInAndStay {
-  0% {
-    transform: translateX(100%);
-    width: 0;
-  }
-
-  10% {
-    transform: translateX(0);
-    width: 300px;
-  }
-
-  80% {
-    transform: translateX(0);
-    width: 300px;
-  }
-
-  100% {
-    transform: translateX(0);
-    width: 300px;
-  }
+.error-icon {
+  color: #ef4444;
 }
 
-@keyframes disappear {
-  0% {
-    transform: translateX(0);
-    width: 300px;
-  }
-
-  100% {
-    transform: translateX(100%);
-    width: 0;
-    right: -50%;
-  }
+.success-icon {
+  color: #10b981;
 }
 
-@keyframes widthShrink {
-  0% {
-    width: 100%;
-  }
 
-  100% {
-    width: 0%;
-  }
+.Toastify__toast--success {
+  font-size: 18px !important;
 }
 
-@media only screen and (max-width: 1240px){
-  .firstProductPage{
+.Toastify__toast--error {
+  font-size: 18px !important;
+}
+
+.Toastify__toast-body {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+@media only screen and (max-width: 1240px) {
+  .firstProductPage {
     padding: 0 30px;
   }
 }
 
-@media only screen and (max-width: 840px){
-  .firstProductPage .product-inner{
+@media only screen and (max-width: 840px) {
+  .firstProductPage .product-inner {
     flex-direction: column;
   }
 
-  .firstProductPage .main-product-images{
+  .firstProductPage .main-product-images {
     flex-direction: column-reverse;
+  }
+
+  .custom-toast {
+    font-size: 16px !important;
+  }
+
+  .custom-toast-message {
+    font-size: 16px;
+  }
+
+  .custom-toast-message span {
+    font-size: 16px;
+  }
+
+  .toast-icon {
+    font-size: 20px;
   }
 }
